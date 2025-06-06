@@ -1,0 +1,1784 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>于悦——作品集 探索艺术的无限可能</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Raleway:ital,wght@0,300;0,600;1,300&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* 使用您提供的配色方案 */
+            --primary-100: #E7D1BB;
+            --primary-200: #c8b39e;
+            --primary-300: #84725e;
+            --accent-100: #A096A5;
+            --accent-200: #463e4b;
+            --text-100: #A096A2;
+            --text-200: #847a86;
+            --bg-100: #151931;
+            --bg-200: #252841;
+            --bg-300: #3d3f5b;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Raleway', sans-serif;
+            background: radial-gradient(circle at top right, var(--bg-200), var(--bg-100));
+            color: var(--text-100);
+            line-height: 1.7;
+            overflow-x: hidden;
+            min-height: 100vh;
+            background-attachment: fixed;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        /* 创意导航栏 */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 25px 0;
+            z-index: 1000;
+            background: rgba(25, 29, 49, 0.85);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid rgba(167, 150, 165, 0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--primary-100);
+            letter-spacing: 1px;
+            text-decoration: none;
+            position: relative;
+            padding-right: 20px;
+        }
+        
+        .logo::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            background: var(--accent-100);
+            border-radius: 50%;
+        }
+        
+        .logo span {
+            color: var(--accent-100);
+            font-style: italic;
+            position: relative;
+            top: -5px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 35px;
+            position: relative;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary-100);
+            font-weight: 300;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            position: relative;
+            padding: 5px 0;
+            transition: all 0.4s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent-100);
+            transform: translateY(-2px);
+        }
+        
+        .nav-links a::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--accent-100);
+            transition: width 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        
+        .nav-links a:hover::before {
+            width: 100%;
+        }
+        
+        /* 创意英雄区域 */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding-left: 10%;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: -100px;
+            right: -200px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, var(--accent-200) 0%, transparent 70%);
+            opacity: 0.1;
+            border-radius: 50%;
+            z-index: -1;
+        }
+        
+        .hero::after {
+            content: "";
+            position: absolute;
+            bottom: 50px;
+            left: 30%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, var(--primary-300) 0%, transparent 70%);
+            opacity: 0.07;
+            border-radius: 50%;
+            z-index: -1;
+        }
+        
+        .hero-content {
+            max-width: 600px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            font-weight: 700;
+            color: var(--primary-100);
+            margin-bottom: 25px;
+            line-height: 1.1;
+            position: relative;
+        }
+        
+        .hero h1 span {
+            color: var(--accent-100);
+            font-style: italic;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .hero h1 span::after {
+            content: "";
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 100%;
+            height: 12px;
+            background: rgba(160, 150, 165, 0.2);
+            z-index: -1;
+        }
+        
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            color: var(--text-100);
+            font-weight: 300;
+            max-width: 500px;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .hero p::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 15px;
+            width: 20px;
+            height: 2px;
+            background: var(--primary-100);
+        }
+        
+        .hero-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 16px 45px;
+            background: transparent;
+            border: 1px solid var(--accent-100);
+            color: var(--primary-100);
+            font-size: 1.1rem;
+            text-decoration: none;
+            border-radius: 0;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--accent-100);
+            transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            z-index: -1;
+        }
+        
+        .hero-btn:hover::before {
+            left: 0;
+        }
+        
+        .hero-btn:hover {
+            color: var(--primary-100);
+        }
+        
+        .hero-btn i {
+            margin-left: 10px;
+            transition: transform 0.4s ease;
+        }
+        
+        .hero-btn:hover i {
+            transform: translateX(5px);
+        }
+        
+        /* 作品展示区新样式 */
+        .portfolio {
+            padding: 150px 0 100px;
+            position: relative;
+        }
+        
+        .portfolio-item {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 80px;
+            background: var(--bg-200);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .portfolio-item.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .portfolio-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .portfolio-media {
+            flex: 1;
+            min-width: 50%;
+            position: relative;
+            overflow: hidden;
+            min-height: 500px;
+            transition: transform 0.5s ease;
+        }
+
+        .portfolio-media:hover {
+            transform: scale(1.02);
+        }
+
+        .portfolio-content {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .portfolio-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .creation-process {
+            flex: 1;
+            margin-top: 20px;
+            border-top: 1px solid rgba(167, 150, 165, 0.2);
+            padding-top: 20px;
+        }
+        
+        .process-content {
+            max-height: 600px;
+            overflow-y: auto;
+            padding-right: 20px;
+            scrollbar-width: thin;
+            scrollbar-color: var(--accent-100) transparent;
+        }
+
+        .process-content::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .process-content::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        
+        .process-content::-webkit-scrollbar-thumb {
+            background-color: var(--accent-100);
+            border-radius: 2px;
+        }
+
+        .process-section {
+            margin-bottom: 30px;
+        }
+
+        .process-section h5 {
+            color: var(--accent-100);
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        
+        .process-section p {
+            color: var(--text-100);
+            margin-bottom: 15px;
+            font-size: 1rem;
+            line-height: 1.8;
+            font-family: 'Raleway', sans-serif;
+            word-break: break-all;
+        }
+        
+        .portfolio-tags {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .tag {
+            background: transparent;
+            color: var(--accent-100);
+            padding: 8px 20px;
+            border: 1px solid var(--accent-100);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .tag:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* 图片画廊样式 */
+        .image-gallery {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .image-gallery .portfolio-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        
+        .image-gallery .portfolio-image.active {
+            opacity: 1;
+        }
+        
+        .gallery-controls {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            z-index: 2;
+        }
+
+        .gallery-controls button {
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: var(--primary-100);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-controls button:hover {
+            transform: scale(1.1);
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .gallery-dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 2;
+        }
+
+        .gallery-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-dot.active {
+            transform: scale(1.2);
+            background: var(--primary-100);
+        }
+
+        /* 图片加载动画 */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+            opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        .portfolio-image {
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        /* 响应式调整 */
+        @media (max-width: 992px) {
+            .portfolio-item {
+                flex-direction: column;
+            }
+
+            .portfolio-item.reverse {
+                flex-direction: column;
+        }
+        
+            .portfolio-media {
+                min-height: 300px;
+            }
+
+            .portfolio-content {
+                padding: 30px;
+            }
+
+            .process-content {
+                max-height: 400px;
+            }
+        }
+        
+        /* 创意装饰元素 */
+        .art-element {
+            position: absolute;
+            z-index: -1;
+            opacity: 0.1;
+            pointer-events: none;
+        }
+        
+        .circle-1 {
+            width: 300px;
+            height: 300px;
+            border: 2px solid var(--accent-100);
+            border-radius: 50%;
+            top: 15%;
+            right: 5%;
+        }
+        
+        .circle-2 {
+            width: 150px;
+            height: 150px;
+            border: 1px solid var(--primary-100);
+            border-radius: 50%;
+            bottom: 10%;
+            left: 8%;
+        }
+        
+        .line-1 {
+            width: 2px;
+            height: 400px;
+            background: var(--accent-100);
+            top: 20%;
+            left: 15%;
+            transform: rotate(45deg);
+        }
+        
+        /* 页脚 */
+        footer {
+            background: var(--bg-300);
+            padding: 100px 0 50px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--primary-100);
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+        
+        .footer-text {
+            color: var(--text-200);
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--bg-200);
+            color: var(--primary-100);
+            font-size: 1.6rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .social-links a::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            background: var(--accent-100);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            z-index: -1;
+        }
+        
+        .social-links a:hover::before {
+            height: 100%;
+        }
+        
+        .social-links a:hover {
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            color: var(--text-200);
+            font-size: 0.95rem;
+            padding-top: 30px;
+            border-top: 1px solid rgba(167, 150, 165, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* 联系方式部分 */
+        .contact {
+            padding: 100px 0;
+            background: var(--bg-200);
+            position: relative;
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-text {
+            font-size: 1.2rem;
+            color: var(--text-100);
+            margin-bottom: 40px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .contact-info p {
+            font-size: 1.1rem;
+            color: var(--primary-100);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-info i {
+            color: var(--accent-100);
+            font-size: 1.3rem;
+        }
+
+        /* 视频优化 */
+        video.portfolio-image {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            background: var(--bg-100);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            max-height: 80vh;
+            margin: 20px 0;
+            }
+            
+        video.portfolio-image:hover {
+            transform: scale(1.01);
+        }
+
+        video.portfolio-image::-webkit-media-controls {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 5px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            }
+            
+        video.portfolio-image:hover::-webkit-media-controls {
+            opacity: 1;
+        }
+
+        video.portfolio-image::-webkit-media-controls-panel {
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            height: 40px;
+        }
+
+        video.portfolio-image::-webkit-media-controls-play-button {
+            background: var(--primary-100);
+            border-radius: 50%;
+            color: var(--bg-100);
+            width: 30px;
+            height: 30px;
+            }
+            
+        video.portfolio-image::-webkit-media-controls-timeline {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            height: 4px;
+            margin: 0 10px;
+            }
+            
+        video.portfolio-image::-webkit-media-controls-current-time-display,
+        video.portfolio-image::-webkit-media-controls-time-remaining-display {
+            color: var(--primary-100);
+            font-size: 12px;
+            margin: 0 5px;
+        }
+
+        video.portfolio-image::-webkit-media-controls-volume-slider {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            height: 4px;
+            margin: 0 10px;
+            }
+            
+        video.portfolio-image::-webkit-media-controls-mute-button {
+            color: var(--primary-100);
+            margin-right: 5px;
+        }
+
+        .portfolio-media video {
+            display: block;
+            width: 100%;
+            height: auto;
+            min-height: auto;
+            aspect-ratio: 16/9;
+        }
+
+        /* 联系方式部分样式 */
+        .contact-section {
+            padding: 5rem 0;
+            background: var(--bg-200);
+        }
+
+        .contact-section h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary-100);
+            font-size: 2.5rem;
+            }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: var(--bg-300);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            
+        .contact-item:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            }
+            
+        .contact-item i {
+            font-size: 1.5rem;
+            color: var(--primary-100);
+            }
+            
+        .contact-item p {
+            margin: 0;
+                font-size: 1.1rem;
+            color: var(--text-100);
+        }
+
+        /* 平滑滚动 */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* 导航栏样式 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            }
+            
+        .nav-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-link {
+            color: #333;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-100);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #666;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 1rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .contact-info {
+                gap: 2rem;
+            }
+
+            .contact-item {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        /* 统一创作说明区块样式，与桃花姬一致 */
+        .creation-process {
+            flex: 1;
+            margin-top: 20px;
+            border-top: 1px solid rgba(167, 150, 165, 0.2);
+            padding-top: 20px;
+        }
+        .process-content {
+            max-height: 600px;
+            overflow-y: auto;
+            padding-right: 20px;
+            scrollbar-width: thin;
+            scrollbar-color: var(--accent-100) transparent;
+        }
+        .process-content::-webkit-scrollbar {
+            width: 4px;
+        }
+        .process-content::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .process-content::-webkit-scrollbar-thumb {
+            background-color: var(--accent-100);
+            border-radius: 2px;
+        }
+        .process-section {
+            margin-bottom: 30px;
+        }
+        .process-section h5 {
+            color: var(--accent-100);
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        .process-section p {
+            color: var(--text-100);
+            margin-bottom: 15px;
+            font-size: 1rem;
+            line-height: 1.8;
+            font-family: 'Raleway', sans-serif;
+            word-break: break-all;
+        }
+
+        /* 优化整体排版，保证视频比例不变且不被遮挡 */
+        .portfolio-media video, .portfolio-media .portfolio-image {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16/9;
+            display: block;
+            background: var(--bg-100);
+            border-radius: 10px;
+            margin: 0 auto;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.10);
+        }
+
+        .portfolio-item {
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+            border-radius: 16px;
+            background: var(--bg-200);
+            margin-bottom: 60px;
+            transition: box-shadow 0.4s cubic-bezier(.4,0,.2,1), transform 0.4s cubic-bezier(.4,0,.2,1);
+            opacity: 0;
+            transform: translateY(40px) scale(0.98);
+            will-change: opacity, transform;
+        }
+        .portfolio-item.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            box-shadow: 0 16px 48px rgba(0,0,0,0.18);
+        }
+        .portfolio-item:hover {
+            box-shadow: 0 24px 64px rgba(0,0,0,0.22);
+            transform: translateY(-4px) scale(1.01);
+        }
+
+        /* 按钮悬停动效 */
+        .hero-btn, .gallery-controls button, .nav-link, .tag {
+            transition: all 0.3s cubic-bezier(.4,0,.2,1);
+        }
+        .hero-btn:hover, .gallery-controls button:hover, .tag:hover {
+            transform: scale(1.08) translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+        }
+
+        /* 卡片浮动动效 */
+        .portfolio-content, .portfolio-media {
+            transition: box-shadow 0.3s cubic-bezier(.4,0,.2,1), transform 0.3s cubic-bezier(.4,0,.2,1);
+        }
+        .portfolio-content:hover, .portfolio-media:hover {
+            box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+            transform: scale(1.01);
+        }
+
+        /* 统一全局字体 */
+        body, .portfolio-info, .process-section p, .process-section h5, .creation-process, .process-content {
+            font-family: 'Raleway', 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        /* 1. 图片和视频自适应原始比例 */
+        .portfolio-media .portfolio-image,
+        .portfolio-media video {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            max-height: 80vh;
+            object-fit: contain;
+            aspect-ratio: unset !important;
+            background: var(--bg-100);
+            border-radius: 10px;
+            margin: 0 auto;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.10);
+            display: block;
+        }
+
+        .image-gallery .portfolio-image {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            margin: auto;
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            background: var(--bg-100);
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.10);
+        }
+
+        /* 2. iOS风格视频播放器 */
+        .video-container {
+            position: relative;
+            width: 100%;
+            background: #000;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .video-container video {
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+            background: #000;
+            display: block;
+        }
+        .center-play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 64px;
+            height: 64px;
+            background: rgba(0,0,0,0.4);
+            backdrop-filter: blur(8px);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s cubic-bezier(0.4,0,0.2,1);
+            z-index: 2;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+        }
+        .center-play-button svg {
+            width: 28px;
+            height: 28px;
+            fill: #fff;
+        }
+        .center-play-button:hover {
+            background: rgba(0,0,0,0.6);
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+        .video-controls {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            opacity: 0;
+            transition: all 0.2s cubic-bezier(0.4,0,0.2,1);
+            z-index: 2;
+            border-bottom-left-radius: 16px;
+            border-bottom-right-radius: 16px;
+        }
+        .video-container:hover .video-controls,
+        .video-container:focus-within .video-controls {
+            opacity: 1;
+        }
+        .progress-container {
+            flex: 1;
+            height: 3px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 1.5px;
+            cursor: pointer;
+            position: relative;
+            margin: 0 16px;
+        }
+        .progress-bar {
+            height: 100%;
+            background: #fff;
+            border-radius: 1.5px;
+            position: relative;
+        }
+        .progress-bar::after {
+            content: '';
+            position: absolute;
+            right: -6px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 12px;
+            height: 12px;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 4px rgba(0,0,0,0.3);
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+        .progress-container:hover .progress-bar::after {
+            opacity: 1;
+        }
+        .volume-control {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0,0,0,0.4);
+            backdrop-filter: blur(8px);
+            padding: 8px 12px;
+            border-radius: 20px;
+        }
+        .volume-icon {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            fill: #fff;
+        }
+        .volume-slider {
+            width: 0;
+            height: 3px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 1.5px;
+            cursor: pointer;
+            position: relative;
+            transition: width 0.2s cubic-bezier(0.4,0,0.2,1);
+            overflow: hidden;
+        }
+        .volume-control:hover .volume-slider {
+            width: 60px;
+        }
+        .volume-level {
+            height: 100%;
+            background: #fff;
+            border-radius: 1.5px;
+            position: relative;
+        }
+        .volume-level::after {
+            content: '';
+            position: absolute;
+            right: -6px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 12px;
+            height: 12px;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 4px rgba(0,0,0,0.3);
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+        .volume-slider:hover .volume-level::after {
+            opacity: 1;
+        }
+        .time-display {
+            color: #fff;
+            font-size: 13px;
+            min-width: 90px;
+            text-align: right;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+        }
+        .fullscreen {
+            width: 28px;
+            height: 28px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s cubic-bezier(0.4,0,0.2,1);
+        }
+        .fullscreen svg {
+            width: 18px;
+            height: 18px;
+            fill: #fff;
+        }
+        .fullscreen:hover svg {
+            transform: scale(1.1);
+        }
+        .video-controls.active {
+            opacity: 1;
+        }
+
+        /* 3. 视频创作部分与平面设计部分排版统一 */
+        .section-title {
+            margin-top: 100px;
+            margin-bottom: 40px;
+            font-size: 2.2rem;
+            color: var(--primary-100);
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        .works-container, .portfolio {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .portfolio-item, .work-item {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 60px;
+            background: var(--bg-200);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+            overflow: hidden;
+            transition: box-shadow 0.4s cubic-bezier(.4,0,.2,1), transform 0.4s cubic-bezier(.4,0,.2,1);
+        }
+        .portfolio-content, .work-content {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .portfolio-media, .video-wrapper {
+            flex: 1;
+            min-width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        @media (max-width: 992px) {
+            .portfolio-item, .work-item {
+                flex-direction: column;
+            }
+            .portfolio-media, .video-wrapper {
+                min-height: 300px;
+            }
+            .portfolio-content, .work-content {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">于悦作品集<span>北京印刷学院 大二/数字媒体艺术</span></a>
+                <ul class="nav-links">
+                    <li><a href="#graphic-design" class="nav-link">平面设计</a></li>
+                    <li><a href="#video-creation" class="nav-link">视频创作</a></li>
+                    <li><a href="#contact" class="nav-link">联系方式</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- 英雄区域 -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>于悦<span>作品集</span></h1>
+            <p>熟练掌握多种设计软件与技术，将技术力量融入艺术创作，实现创意的完美呈现</p>
+            <a href="#portfolio" class="hero-btn">浏览作品 <i class="fas fa-arrow-right"></i></a>
+        </div>
+        
+        <!-- 装饰元素 -->
+        <div class="art-element circle-1"></div>
+        <div class="art-element circle-2"></div>
+        <div class="art-element line-1"></div>
+    </section>
+    
+    <!-- 作品集展示 -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-title">
+                <h2>平面设计作品</h2>
+            </div>
+            
+            <!-- 桃花姬系列 -->
+                <div class="portfolio-item">
+                    <div class="portfolio-media">
+                    <div class="image-gallery">
+                        <img src="images/桃花姬/桃花姬 虞姬.jpg" alt="桃花姬 虞姬" class="portfolio-image active">
+                        <img src="images/桃花姬/桃花姬 杜丽娘.jpg" alt="桃花姬 杜丽娘" class="portfolio-image">
+                        <img src="images/桃花姬/创作思维1.jpg" alt="创作思维1" class="portfolio-image">
+                        <img src="images/桃花姬/创作思维2.jpg" alt="创作思维2" class="portfolio-image">
+                        <img src="images/桃花姬/创作思维3.jpg" alt="创作思维3" class="portfolio-image">
+                        <div class="gallery-controls">
+                            <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                            <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                        <div class="gallery-dots"></div>
+                    </div>
+                </div>
+                <div class="portfolio-content">
+                            <div class="portfolio-info">
+                        <h3>学院奖桃花姬品牌获奖海报</h3>
+                        <div class="creation-process">
+                            <div class="process-content">
+                                <div class="process-section">
+                                    <h5>1. 文化调研与灵感溯源</h5>
+                                    <p>传统戏曲符号提炼：</p>
+                                    <p>从京剧脸谱的对称结构、唐代仕女图的面靥妆容中提取"柔美"与"华贵"基因，将脸谱轮廓与珠宝头饰（如点翠、珠钗）转化为现代设计语言</p>
+                                    <p>东方美学体系构建：</p>
+                                    <p>以"桃花"为视觉锚点，通过渐变粉色（Pantone 217C→258C）、花卉纹理与书法字体传递"温润典雅"的品牌气质，弱化传统医药产品的严肃感</p>
+                                </div>
+                                <div class="process-section">
+                                    <h5>2. 品牌策略与用户共情</h5>
+                                    <p>精准定位分析：</p>
+                                    <p>锁定18-35岁年轻女性受众，结合"养颜""东方""女性化"品牌关键词，确定"内外兼修"的视觉传达目标——用"脸谱+珠宝"隐喻产品带来的"好气色"与"精致感"</p>
+                            </div>
+                                <div class="process-section">
+                                    <h5>3. 设计执行与技术创新</h5>
+                                    <p>色彩系统设计：</p>
+                                    <p>主色选用粉色渐变，通过透明度叠加营造"梦幻感"，辅助色（如金棕）点缀珠宝细节，提升奢华氛围</p>
+                                    <p>图形创新方法论：</p>
+                                    <p>戏曲脸谱线条软化处理（圆润化边缘），保留对称与花纹基因；女性面部轮廓参考唐代"额饰""花钿"造型，头饰融合花朵、珠串与宝石</p>
+                                    <p>字体与排版实验：</p>
+                                    <p>定制书法字体笔画粗细变化（避免传统书法的沉重感），文案层级通过字号对比与竖排布局强化东方韵律</p>
+                        </div>
+                                <div class="process-section">
+                                    <h5>4. 创作背景深度解析</h5>
+                                    <p>选题分析与方向锁定：</p>
+                                    <p>深度剖析"传统品牌年轻化"痛点，挖掘桃花姬"东方养颜"与年轻女性审美之间的文化断层。通过竞品分析（研究30+同类国潮设计），锁定"粉色微主题色+东方美学"作为差异化赛道。</p>
+                                    <p>历史女性形象研究：</p>
+                                    <p>以"面若桃花"为核心意象，选取京剧经典角色虞姬（刚柔并济的悲剧美学）与杜丽娘（反叛封建礼教的女性觉醒），通过两人形象传递当代女性"打破束缚、勇敢绽放"的精神内核。</p>
+                                    <p>传统文化现代化表达：</p>
+                                    <p>视觉符号转化：将虞姬的"霸王别姬"头饰（珠翠+红绸）与杜丽娘的"牡丹簪花"简化为几何化珠宝元素</p>
+                                    <p>动态感设计：图片2头饰的不对称飘带打破传统对称构图，隐喻女性力量的流动性。</p>
+                                    <p>品牌调性融合：</p>
+                                    <p>通过"面颊桃花花纹"具象化"服用桃花姬后气血充盈"的产品卖点，同时以"东方艳妆"文案强化古典与现代碰撞的视觉冲击力。</p>
+                                </div>
+                                <div class="process-section">
+                                    <h5>5. 文化叙事与设计创新</h5>
+                                    <p>独立主导桃花姬品牌视觉升级项目，从30+历史女性形象中锁定虞姬与杜丽娘作为文化载体，通过解构京剧元素与"面若桃花"古典意象，成功传递"东方养颜"品牌调性，获XX设计大奖。</p>
+                                    <p>用户洞察与精准定位：</p>
+                                    <p>针对18-35岁女性受众，提出"传统戏曲符号现代化"策略，平衡文化厚重感与商业传播需求，提升品牌在年轻市场的认知度。</p>
+                                    <p>全流程设计执行力：</p>
+                                    <p>从选题分析到落地执行全程把控，熟练运用PS软件完成高精度插画与动态排版，擅长将传统文化符号转化为符合Z世代审美的视觉资产（如渐变色彩、几何化珠宝设计）。</p>
+                                    <p>跨领域知识整合：</p>
+                                    <p>融合京剧角色研究、色彩心理学与女性主义设计理论，增强设计的文化深度与社会价值共鸣。</p>
+                                </div>
+                            </div>
+                        </div>
+                                <div class="portfolio-tags">
+                            <span class="tag">平面设计</span>
+                            <span class="tag">传统艺术</span>
+                            <span class="tag">人物设计</span>
+                            <span class="tag">品牌设计</span>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                
+            <!-- 植物系列 -->
+                <div class="portfolio-item">
+                <div class="portfolio-content">
+                            <div class="portfolio-info">
+                        <h3>树木保护系列——动态海报</h3>
+                        <div class="creation-process">
+                            <div class="process-content">
+                                <div class="process-section">
+                                    <h5>创作理念</h5>
+                                    <p>我聚焦于"人与植物的共生关系"这一深刻主题，以树木为核心主体，传达保护树木、节约用纸与环境保护的核心思想。</p>
+                                </div>
+                                <div class="process-section">
+                                    <h5>视觉设计</h5>
+                                    <p>画面整体采用平面插画风格，搭配简单鲜明的色彩，旨在以最直观、最纯粹的视觉语言引发观者的共鸣。背景以明亮的黄色为主调，营造出一种充满活力却又略带警示意味的氛围。前景部分，深绿色的竖条状图案形似树木的躯干，上面点缀着小巧的叶片，简洁而有力地勾勒出树木的形态。</p>
+                                </div>
+                                <div class="process-section">
+                                    <h5>文案设计</h5>
+                                    <p>在画面的视觉中心偏上位置，"Tree conservation scheme"（树木保护计划）几个字母以手写字体的形式呈现，给人一种亲近且真实的感觉。下方依次排列着"Plan A""Plan B""Plan C""Plan D"等多个计划名称，每个名称旁边都被醒目的红色叉号标记，暗示着这些旨在保护树木的计划似乎都已停滞不前，或是尚未得到进一步的推进与落实。这种视觉呈现方式，引发观者对保护树木行动进展的反思。</p>
+                                </div>
+                                <div class="process-section">
+                                    <h5>动态效果</h5>
+                                    <p>而在这些计划名称的下方，随着动态效果的呈现，仿佛纸张在被一台无形的碎纸机逐步销毁。每一片被销毁的纸张背后，都隐约浮现出一棵树木的轮廓，仿佛在诉说着：在我们随意浪费纸张的每一个瞬间，都有一棵树木正在遭受破坏。这一巧妙的动态设计，将纸张浪费与树木砍伐之间的因果关系直观地展现出来，提醒人们每一次对纸张的漠视，都是对树木生命的伤害。</p>
+                                </div>
+                                <div class="process-section">
+                                    <h5>主题升华</h5>
+                                    <p>海报底部的文字"Behind every piece of paper you waste is the destruction of a tree's growth"（在你浪费的每一张纸背后，都是树木生长遭受的破坏），以一种沉重而有力的方式点明主题。而署名"people"（人们），则将责任直指每一个个体，强调保护树木、节约用纸是每个人义不容辞的责任。</p>
+                                </div>
+                            </div>
+                        </div>
+                                <div class="portfolio-tags">
+                            <span class="tag">平面设计</span>
+                            <span class="tag">环保</span>
+                            <span class="tag">插画</span>
+                                </div>
+                            </div>
+                        </div>
+                <div class="portfolio-media">
+                    <div class="image-gallery">
+                        <img src="images/植物/植物平面版.jpg" alt="植物系列" class="portfolio-image active">
+                        <video class="portfolio-image" controls preload="metadata" poster="videos/zhiwu.mp4">
+                            <source src="videos/zhiwu.mp4" type="video/mp4">
+                            您的浏览器不支持视频播放。
+                        </video>
+                        <div class="gallery-controls">
+                            <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                            <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                        <div class="gallery-dots"></div>
+                        </div>
+                    </div>
+                </div>
+                
+            <!-- 中共一大系列 -->
+                <div class="portfolio-item">
+                    <div class="portfolio-media">
+                    <div class="image-gallery">
+                        <img src="images/中共一大/文创设计1.jpg" alt="中共一大文创设计" class="portfolio-image active">
+                        <img src="images/中共一大/2.jpg" alt="中共一大设计2" class="portfolio-image">
+                        <img src="images/中共一大/3.jpg" alt="中共一大设计3" class="portfolio-image">
+                        <div class="gallery-controls">
+                            <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                            <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                        <div class="gallery-dots"></div>
+                    </div>
+                </div>
+                <div class="portfolio-content">
+                            <div class="portfolio-info">
+                        <h3>《新青年》系列杂志——电子印章文创产品</h3>
+                        <div class="creation-process">
+                            <div class="process-content">
+                                <div class="process-section">
+                                    <h5>创作过程阐述</h5>
+                                    <p>本作品以中共一大纪念馆《新青年》系列杂志百年精神为内核，打造了一款可自定义的数字电子印章工具，旨在通过数字媒介实现历史符号与当代青年文化的创造性对话。</p>
+                                </div>
+                                <div class="process-section">
+                                    <h5>文化内核的数字化转译</h5>
+                                    <p>从《新青年》杂志中提取关键视觉符号——泛黄纸张质感、复古铅字字体、民国雕版纹样，将其转化为数字设计元素库；同时融入现代设计语言，如动态粒子光效、透明图层叠加、自定义宣言输入框，构建"旧魂新形"的视觉体系。</p>
+                            </div>
+                                <div class="process-section">
+                                    <h5>双模式交互设计</h5>
+                                    <p>经典复刻模板：一键调用"觉醒年代""科学之光"等十余款预设模板，内含杂志原版口号（如"民主""科学"）、复古铅字排版，适配短视频、朋友圈九宫格等场景，5-20元亲民定价降低体验门槛，快速为内容注入历史厚重感。</p>
+                                    <p>自由创想工坊：开放全功能设计界面，用户可混搭元素——从陈独秀手稿复刻标语到自定义个性宣言（如"真理无主"），调节透明度、叠加动态效果（文字逐字浮现/飞鸟掠影），甚至嵌入隐形数字指纹保护版权，80元起满足深度创作需求。</p>
+                        </div>
+                                <div class="process-section">
+                                    <h5>技术赋能的文化共鸣</h5>
+                                    <p>内置AI智能推荐系统，基于用户图片色调与内容主题，自动匹配复古滤镜（如泛黄颗粒感）与文案组合（如"个性+独立"标语），同时提供付费解锁稀有素材库（民国科学仪器手绘、新文化运动版画），让百年前的"民主、科学、求真"精神转化为可触摸的数字符号。</p>
+                                </div>
+                                <div class="process-section">
+                                    <h5>跨时代价值的传递</h5>
+                                    <p>通过水印的二次创作，用户既能以"新青年"身份与历史对话，又能在数字创作中彰显"自由、探索、自我定义"的当代态度，使《新青年》的革新精神在每一帧画面中延续，真正实现"以文创为桥，让精神在个体创作中焕活"。</p>
+                                </div>
+                            </div>
+                        </div>
+                                <div class="portfolio-tags">
+                            <span class="tag">平面设计</span>
+                            <span class="tag">文创</span>
+                            <span class="tag">历史</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+            <!-- 专题页设计 -->
+                <div class="portfolio-item">
+                <div class="portfolio-content">
+                    <div class="portfolio-info">
+                        <h3>桃花姬中秋节电商网页设计</h3>
+                        <div class="creation-process">
+                            <div class="process-content">
+                                <div class="process-section">
+                                    <h5>设计概述</h5>
+                                    <p>此"桃花姬国潮好礼"UI专题页，围绕节日礼品推广展开。色彩上，粉色柔美契合品牌，辅以金色显高端，营造节日氛围。</p>
+                                </div>
+                                <div class="process-section">
+                                    <h5>布局设计</h5>
+                                    <p>布局呈垂直流线，顶部主题海报点明主旨，接着展示产品包装，直观呈现种类。中部会员权益板块突出特权，吸引用户。下方四款礼盒各有特色，方便挑选。</p>
+                                </div>
+                                <div class="process-section">
+                                    <h5>视觉元素</h5>
+                                    <p>传统元素运用丰富，祥云背景、书法字体，增添国潮韵味，与品牌定位相符。整体通过多方面巧妙设计，成功吸引用户，激发购买欲。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-tags">
+                            <span class="tag">网页设计</span>
+                            <span class="tag">UI/UX</span>
+                            <span class="tag">交互设计</span>
+                        </div>
+                    </div>
+                </div>
+                    <div class="portfolio-media">
+                    <div class="image-gallery">
+                        <img src="images/专题页/专题页.jpg" alt="专题页设计" class="portfolio-image active">
+                        <div class="gallery-controls">
+                            <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                            <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                        <div class="gallery-dots"></div>
+                        </div>
+                    </div>
+                </div>
+                
+            <!-- 视频创作部分 -->
+            <div class="section-title" style="margin-top: 100px;">
+                <h2>视频创作</h2>
+            </div>
+
+            <!-- 饺子视频（左说明右视频） -->
+                <div class="portfolio-item">
+                <div class="portfolio-content">
+                    <div class="portfolio-info">
+                        <h3>饺子——中国传统文化创新思考</h3>
+                        <div class="creation-process">
+                            <div class="process-content">
+                                <div class="process-section">
+                                    <h5>创作过程阐述</h5>
+                                    <p>本视频是我作为组长主要负责的作品，以中国传统美食饺子为中心，通过当代职场状态融合饺子本身的悠久历史和特点，展开一场奇妙风趣的思考和想象。<br>
+​文化挖掘与选题确立​：<br>
+饺子作为中国人民传统主食文化中最常见、最普遍的美食，却在快节奏生活中逐渐被简化为"速冻食品"或"节日符号"。通过前期调研（线上问卷+跨年龄段采访），我们发现：​超70%年轻人仅知饺子为"团圆食物"，对其馅料寓意、包法多样性及历史渊源知之甚少。基于此，我们锁定三个核心切口——<br>
+​馅料的符号学​：芹菜馅（勤财）、韭菜馅（久财）等背后隐藏的民俗祈愿；<br>
+​包法的地域密码​：北方捏合纹 vs 南方褶子花，映射文化多样性；<br>
+​当代语境新解​：将"饺子"与职场"混熟"梗结合，赋予"包容""协作"的新寓意。<br>
+​叙事结构创新​：<br>
+为打破传统文化视频的说教感，我们以​"职场新人成长记"​为主线<br>
+视觉与技术实现​：<br>
+​动画风格​：采用扁平化国潮插画，搭配水墨晕染转场，平衡传统与现代感；<br>
+​动态细节​：饺子拟人化眨眼、馅料"蹦跳"出场等趣味设计，增强记忆点；<br>
+​。<br>
+​文化共鸣与传播策略​：<br>
+视频不仅呈现知识，更试图唤醒情感联结：<br>
+​职场隐喻​："混着混着就熟了"调侃职场社交，暗合饺子"包容万象"的特质；<br>
+​传播钩子​：结尾设置"快去吃饺子"喊话，唤醒用户内心深处对饺子的温暖<br>
+​创作挑战与突破​：<br>
+作为组长，我需协调调研、剧本、拍摄多线程工作。最困难的是平衡趣味性与文化深度——初期动画脚本过于娱乐化，表达内容太多，整体节奏失调，经导师建议后，我们加将其以职场新人作为主线将其链接在一起，突破难关。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-media">
+                        <video class="portfolio-image" controls preload="metadata" poster="videos/jiaozi.mp4">
+                            <source src="videos/jiaozi.mp4" type="video/mp4">
+                            您的浏览器不支持视频播放。
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AIGC敦煌文化作品（左说明右视频） -->
+            <div class="portfolio-item">
+                <div class="portfolio-content">
+                            <div class="portfolio-info">
+                        <h3>AIGC敦煌文化作品</h3>
+                        <div class="creation-process">
+                            <div class="process-content">
+                                <div class="process-section">
+                                    <p>本作品是我首次系统探索AI视频生成技术在传统文化叙事中的创新应用，全面负责视频生成到后期初剪的全流程创作。作品构建了现代修复师穿越时空向北魏画师乐僔及九色鹿学习传统技艺的叙事框架，通过AI分层生成技术实现历史场景与工艺流程的精准还原。<br><br>创作难点在于平衡生成效率与历史真实性。通过建立传统文化数据库，将专业术语转化为AI可理解的视觉描述，实现修复动作与工具使用的精准生成。最终作品在AI高效创作下，仍保持专业级视觉还原与叙事流畅性，验证了AI赋能文化遗产传播的潜力。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-media">
+                        <video class="portfolio-image" controls preload="metadata" poster="videos/敦煌.mp4">
+                            <source src="videos/敦煌.mp4" type="video/mp4">
+                            您的浏览器不支持视频播放。
+                        </video>
+                        </div>
+                    </div>
+                </div>
+                
+            <!-- 圆明园（左说明右视频） -->
+                <div class="portfolio-item">
+                <div class="portfolio-content">
+                    <div class="portfolio-info">
+                        <h3>圆明园——历史记忆创新重现</h3>
+                        <div class="creation-process">
+                            <div class="process-content">
+                                <div class="process-section">
+                                    <p>本作品以圆明园的兴衰史为叙事主线，结合"BE美学"与"纯爱战神"的流行文化概念，通过视频与文字的双重载体，完成一场跨越时空的情感对话。<br><br>​内容架构分为三部分：<br><br>​​"BE之路"​——以悲剧美学视角解构圆明园的历史伤痕。通过英法联军与八国联军的两次劫难，以"暴行""耻辱"等关键词强化民族集体记忆，呼应古希腊悲剧中"不可抗力的残酷美感"。<br>​​"纯爱战神"​——将个体对祖国的情感升华为"纯粹的双向奔赴"。视频中拟通过对比圆明园昔日的辉煌与今日的残垣，激发观众对文物归国、民族复兴的深切渴望，诠释"爱国"作为最极致的纯爱。<br>​​"OE到HE"​——提出开放结局的展望。技术手段（如数字复原）与国民信念成为扭转BE的关键，暗示历史悲剧终将在持续进步中迈向HE，但需始终铭记"故事开端的悲剧性"。<br>​创作特色​：<br>​文化符号重构​：用"BE美学"消解宏大叙事的沉重感，以"纯爱战神"拉近青年与历史的情感距离。<br>​情感张力营造​：视频中拟运用废墟影像与数字复原画面的交替剪辑，形成历史悲怆与未来希冀的强烈对比。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-media">
+                        <video class="portfolio-image" controls preload="metadata" poster="videos/圆明园.mp4">
+                            <source src="videos/圆明园.mp4" type="video/mp4">
+                            您的浏览器不支持视频播放。
+                        </video>
+                        </div>
+                </div>
+            </div>
+
+            <!-- 新青年最终作品（左说明右视频） -->
+            <div class="portfolio-item">
+                <div class="portfolio-content">
+                            <div class="portfolio-info">
+                        <h3>《新青年》系列杂志——电子印章文创产品视频展示</h3>
+                        <div class="creation-process">
+                            <div class="process-content">
+                                <div class="process-section">
+                                    <h5>创作过程阐述</h5>
+                                    <p>本作品以中共一大纪念馆《新青年》系列杂志百年精神为内核，打造了一款可自定义的数字电子印章工具，旨在通过数字媒介实现历史符号与当代青年文化的创造性对话。<br><br>​文化内核的数字化转译​：<br>从《新青年》杂志中提取关键视觉符号——泛黄纸张质感、复古铅字字体、民国雕版纹样，将其转化为数字设计元素库；同时融入现代设计语言，如动态粒子光效、透明图层叠加、自定义宣言输入框，构建"旧魂新形"的视觉体系。<br><br>​双模式交互设计​：<br>​经典复刻模板：一键调用"觉醒年代""科学之光"等十余款预设模板，内含杂志原版口号（如"民主""科学"）、复古铅字排版，适配短视频、朋友圈九宫格等场景，5-20元亲民定价降低体验门槛，快速为内容注入历史厚重感。<br>​自由创想工坊​：开放全功能设计界面，用户可混搭元素——从陈独秀手稿复刻标语到自定义个性宣言（如"真理无主"），调节透明度、叠加动态效果（文字逐字浮现/飞鸟掠影），甚至嵌入隐形数字指纹保护版权，80元起满足深度创作需求。<br><br>​技术赋能的文化共鸣​：<br>内置AI智能推荐系统，基于用户图片色调与内容主题，自动匹配复古滤镜（如泛黄颗粒感）与文案组合（如"个性+独立"标语），同时提供付费解锁稀有素材库（民国科学仪器手绘、新文化运动版画），让百年前的"民主、科学、求真"精神转化为可触摸的数字符号。<br><br>​跨时代价值的传递​：<br>通过水印的二次创作，用户既能以"新青年"身份与历史对话，又能在数字创作中彰显"自由、探索、自我定义"的当代态度，使《新青年》的革新精神在每一帧画面中延续，真正实现"以文创为桥，让精神在个体创作中焕活"。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-media">
+                        <video class="portfolio-image" controls preload="metadata" poster="videos/a.mp4">
+                            <source src="videos/a.mp4" type="video/mp4">
+                            您的浏览器不支持视频播放。
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 节日视频剪辑作品（只保留标题） -->
+            <div class="portfolio-item">
+                <div class="portfolio-content">
+                    <div class="portfolio-info">
+                        <h3>节日视频剪辑作品</h3>
+                    </div>
+                    <div class="portfolio-media">
+                        <video class="portfolio-image" controls preload="metadata" poster="videos/过年.mp4">
+                            <source src="videos/过年.mp4" type="video/mp4">
+                            您的浏览器不支持视频播放。
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 联系方式 -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>联系方式</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>邮箱：yy06250000@qq.com</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p>电话：19818945737</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>地址：北京市大兴区北京印刷学院</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">于悦作品集</div>
+                <p class="footer-text">设计是我与世界对话的桥梁，我用心雕琢每一个细节，希望我的作品能触动你的心</p>
+                
+                <div class="copyright">
+                    <p>© 2025 于悦作品集 | 所有作品版权归创作者所有 | 设计融合艺术与创新</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // 滚动显示动画
+        function handleScrollAnimation() {
+            const items = document.querySelectorAll('.portfolio-item');
+            items.forEach(item => {
+                const itemTop = item.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (itemTop < windowHeight * 0.85) {
+                    item.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', handleScrollAnimation);
+        window.addEventListener('load', handleScrollAnimation);
+
+        // 平滑滚动功能
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // 导航栏交互效果
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section[id]');
+
+        function highlightNavLink() {
+            const scrollY = window.pageYOffset;
+            
+            sections.forEach(section => {
+                const sectionHeight = section.offsetHeight;
+                const sectionTop = section.offsetTop - 100;
+                const sectionId = section.getAttribute('id');
+                
+                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }
+
+        window.addEventListener('scroll', highlightNavLink);
+
+        // 图片画廊功能优化
+        document.addEventListener('DOMContentLoaded', function() {
+            const galleries = document.querySelectorAll('.image-gallery');
+            
+            galleries.forEach(gallery => {
+                const images = gallery.querySelectorAll('.portfolio-image');
+                const prevBtn = gallery.querySelector('.prev-btn');
+                const nextBtn = gallery.querySelector('.next-btn');
+                const dotsContainer = gallery.querySelector('.gallery-dots');
+                let currentIndex = 0;
+
+                // 创建导航点
+                images.forEach((_, index) => {
+                    const dot = document.createElement('div');
+                    dot.classList.add('gallery-dot');
+                    if (index === 0) dot.classList.add('active');
+                    dot.addEventListener('click', () => showImage(index));
+                    dotsContainer.appendChild(dot);
+                });
+
+                const dots = dotsContainer.querySelectorAll('.gallery-dot');
+
+                function showImage(index) {
+                    // 暂停当前视频（如果有）
+                    const currentVideo = images[currentIndex].querySelector('video');
+                    if (currentVideo) {
+                        currentVideo.pause();
+                    }
+
+                    images[currentIndex].classList.remove('active');
+                    dots[currentIndex].classList.remove('active');
+                    currentIndex = index;
+                    images[currentIndex].classList.add('active');
+                    dots[currentIndex].classList.add('active');
+
+                    // 如果是视频，重置到开始
+                    const newVideo = images[currentIndex].querySelector('video');
+                    if (newVideo) {
+                        newVideo.currentTime = 0;
+                    }
+                }
+
+                function nextImage() {
+                    let nextIndex = currentIndex + 1;
+                    if (nextIndex >= images.length) nextIndex = 0;
+                    showImage(nextIndex);
+                }
+
+                function prevImage() {
+                    let prevIndex = currentIndex - 1;
+                    if (prevIndex < 0) prevIndex = images.length - 1;
+                    showImage(prevIndex);
+                }
+
+                // 添加按钮事件监听
+                prevBtn.addEventListener('click', prevImage);
+                nextBtn.addEventListener('click', nextImage);
+            });
+        });
+
+        // 按钮波纹动效
+        function addRippleEffect(e) {
+            const button = e.currentTarget;
+            const circle = document.createElement('span');
+            const diameter = Math.max(button.clientWidth, button.clientHeight);
+            const radius = diameter / 2;
+            circle.style.width = circle.style.height = `${diameter}px`;
+            circle.style.left = `${e.clientX - button.getBoundingClientRect().left - radius}px`;
+            circle.style.top = `${e.clientY - button.getBoundingClientRect().top - radius}px`;
+            circle.classList.add('ripple');
+            button.appendChild(circle);
+            setTimeout(() => circle.remove(), 600);
+        }
+        document.querySelectorAll('.hero-btn, .gallery-controls button, .tag').forEach(btn => {
+            btn.addEventListener('click', addRippleEffect);
+        });
+    </script>
+</body>
+</html>
